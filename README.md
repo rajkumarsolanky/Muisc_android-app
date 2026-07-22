@@ -1,28 +1,25 @@
-#🎵 Music by RajUniverse
-Experience your music in a new dimension. Music is a high-performance local audio player for Android that combines a sophisticated "Glassmorphism" aesthetic with powerful functionality. Designed for audiophiles who demand both spatial clarity and fluid visual design.
-✨ Key Features
-•
-💎 Glassmorphism UI: A fully customizable interface with adjustable backdrop blur intensity and frosted glass effects.
-•
-🎨 Dynamic Theme Engine: Full support for Light and Dark modes with adaptive text and "smart glass" overlays that shift contrast based on your theme.
-•
-🌈 Accent Customization: Personalize your experience with custom accent colors (Cyan, Red, Purple, Green) that apply a beautiful "glow" effect to navigation components.
-•
-🎧 Premium Playback: Powered by Jetpack Media3 & ExoPlayer for seamless, high-fidelity audio handling.
-•
-📱 Future-Proof Design: Optimized for Android 15 (SDK 35) and beyond, while maintaining full compatibility back to Android 10.
-•
-🔍 Smart Library: Automatically scans and filters your local storage, ignoring small sound effects and clutter.
-🛠️ Technical Stack
-•
-Language: 100% Kotlin
-•
-Architecture: MVVM with Coroutines & Flow
-•
-Database: Room Persistence Library
-•
-UI Components: Material 3, Custom GlassStyler engine, Activity-KTX
-•
-Minimum SDK: API 29 (Android 10)
-•
-Target SDK: API 35 (Android 15)
+# 🎵 Music by Rajkumar Solanky
+
+An offline-first Android music player built around a custom Glassmorphism design system. 
+Every glass panel's intensity and every accent color respond in real time — no restart needed. 
+Powered by Jetpack Media3 & ExoPlayer for gapless, high-fidelity local playback, with a Room-backed 
+library cache for instant app opens.
+
+## ✨ Features
+- 💎 **Live Glass Engine** — a custom-built styler that dynamically generates translucent glass 
+  drawables at runtime; drag the intensity slider and every panel updates instantly.
+- 🌈 **Real-time Accent Theming** — pick cyan, red, purple, or green and watch the whole UI 
+  re-tint live, from the mini-player to the seek bar.
+- 🎧 **Media3 + ExoPlayer Playback** — background playback via MediaSessionService with full 
+  media-notification and lock-screen controls.
+- 🔍 **Smart Local Library** — MediaStore-backed scanning with folder exclusion and a 
+  small-file filter, cached in Room so re-opening the app is instant.
+- ⚡ **Instant Cold Starts** — cached library loads immediately; fresh scans happen silently 
+  in the background.
+
+## 🛠️ Tech Stack
+- **Language:** 100% Kotlin
+- **Playback:** Jetpack Media3 (ExoPlayer + MediaSession)
+- **Persistence:** Room + SharedPreferences-backed reactive settings (StateFlow)
+- **UI:** Custom View/XML with a runtime GlassStyler + ThemeController, no Compose
+- **Min SDK:** API 35 (Android 15) · **Target SDK:** API 36
